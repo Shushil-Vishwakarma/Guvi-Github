@@ -1,0 +1,95 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+When you type a web address into your browser, it sends a request to a server somewhere on the internet. This request and response process is made possible by a set of rules called HTTP, or Hypertext Transfer Protocol. HTTP has evolved over time, and two versions you might hear about are HTTP/1.1 and HTTP/2. Let's break down the main differences between them in simple terms.
+
+Background: HTTP/1.1
+Think of HTTP/1.1 as the older sibling. It's been around for a while and has been the standard way for browsers and servers to talk to each other. However, as websites became more complex, HTTP/1.1 started to show some limitations.
+
+Limitations of HTTP/1.1:
+Slow Loading: Imagine you're at a fast food drive-thru with only one window to take orders. If the person in front of you takes a long time to order, you're stuck waiting, even if you know what you want. That's a bit like how HTTP/1.1 works – it can get stuck waiting for one thing, which slows down the whole process.
+
+Lots of Connections: With HTTP/1.1, if a webpage has many images, scripts, and other elements, your browser has to make lots of separate connections to the server to fetch each one. This can slow things down because each connection takes time to set up.
+
+Not Very Efficient: HTTP/1.1 doesn't always use the available internet bandwidth very efficiently. It sends a lot of extra information with each request and response, which can add up and slow things down.
+
+Enter HTTP/2
+HTTP/2 came along to tackle these problems and make web browsing faster and more efficient.
+
+Key Features of HTTP/2:
+More Efficient Communication: HTTP/2 allows browsers and servers to communicate more efficiently by sending multiple requests and responses at the same time over a single connection. It's like having more than one window at the drive-thru, so orders can be taken simultaneously.
+
+Less Wasted Space: HTTP/2 uses smarter techniques to reduce the extra information sent with each request and response. It's like packing a suitcase more efficiently – you can fit more stuff in without wasting space.
+
+Gets Ahead of the Game: HTTP/2 lets servers send resources to your browser before you even ask for them. It's like a waiter bringing you extra napkins before you realize you need them. This can speed up loading times because the browser already has what it needs.
+
+In a Nutshell
+HTTP/2 is like an upgraded version of HTTP/1.1. It's faster, more efficient, and better at handling modern websites with lots of elements. While HTTP/1.1 is still around, more and more websites are moving to HTTP/2 to give users a smoother browsing experience. So, the next time you're surfing the web, remember that the protocol behind it all is constantly evolving to make your online adventures faster and more enjoyable.
+
+------------------------------------------------------------------------
+Write a blog about objects and its internal representation in Javascript
+
+In the world of JavaScript, objects are fundamental building blocks that enable developers to structure and organize data in meaningful ways. Understanding how objects work and their internal representation is crucial for mastering JavaScript development. In this blog post, we'll delve into the concept of objects, explore their internal representation, and uncover some best practices for working with objects in JavaScript.
+
+Understanding Objects in JavaScript
+In JavaScript, an object is a collection of key-value pairs, where each key is a string (or Symbol) and each value can be of any data type, including other objects, functions, arrays, and primitives. Objects in JavaScript are incredibly flexible and dynamic, allowing developers to create complex data structures and model real-world entities with ease.
+
+javascript
+Copy code
+// Example of an object in JavaScript
+let person = {
+    name: 'John',
+    age: 30,
+    isStudent: false,
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+person.greet(); // Outputs: Hello, my name is John
+Internal Representation of Objects
+Internally, JavaScript engines use various mechanisms to represent objects. One common approach is to use a combination of properties and an internal [[Prototype]] link to another object, forming a prototype chain. Each object has a prototype, which serves as a fallback mechanism for property lookups.
+
+When you access a property of an object, the JavaScript engine first checks if the property exists on the object itself. If not found, it traverses up the prototype chain until it finds the property or reaches the end of the chain (the prototype of Object).
+
+Best Practices for Working with Objects
+Use Object Literals: Object literals provide a concise and readable way to create objects in JavaScript. Take advantage of object literals when defining simple key-value pairs.
+
+Avoid Modifying Object Prototype: Modifying the built-in object prototypes in JavaScript, such as Object.prototype or Array.prototype, can lead to unexpected behavior and compatibility issues. Stick to extending objects using composition rather than inheritance.
+
+Use Object Destructuring: Object destructuring is a powerful feature introduced in ES6 that allows you to extract multiple properties from an object and assign them to variables in a single statement. It promotes cleaner and more concise code.
+
+Be Mindful of Property Access: When accessing properties of objects, be aware of the prototype chain and potential performance implications. Property access on deeply nested objects or prototypes further up the chain may result in slower lookup times.
+
+Consider Immutability: Embrace immutability where possible, especially when dealing with shared objects or state management. Immutable objects help prevent unintended side effects and make code easier to reason about.
+
+Conclusion
+Objects are a foundational concept in JavaScript, empowering developers to create dynamic and expressive code. By understanding how objects work and their internal representation, you can leverage their full potential while writing clean, maintainable, and efficient JavaScript code. Keep exploring and experimenting with objects to unlock new possibilities in your JavaScript projects!
+
+------------------------------------------------------------------------
+codekata practice
+------------------------------------------------------------------------
+Read about IP address, port, HTTP methods, MAC address	
+IP Address (Internet Protocol Address):
+An IP address is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two main purposes: host or network interface identification and location addressing. There are two primary versions of IP addresses: IPv4 (32-bit) and IPv6 (128-bit). IPv4 addresses are the most commonly used and are expressed as four sets of numbers separated by periods (e.g., 192.168.0.1).
+
+Port:
+A port is a communication endpoint in a computer network. Ports are used to distinguish between different services or processes running on a single host or computer. In networking, ports are identified by numbers ranging from 0 to 65535. Certain well-known ports are reserved for specific services, such as port 80 for HTTP (Hypertext Transfer Protocol) and port 443 for HTTPS (HTTP Secure).
+
+HTTP Methods (HTTP Verbs):
+HTTP methods, also known as HTTP verbs, are used to indicate the desired action to be performed on a resource identified by a Uniform Resource Identifier (URI). The most common HTTP methods include:
+
+GET: Retrieves data from the server.
+POST: Submits data to the server for processing.
+PUT: Updates a resource on the server.
+DELETE: Removes a resource from the server.
+PATCH: Partially updates a resource on the server.
+HEAD: Retrieves metadata about a resource without fetching the resource itself.
+These HTTP methods define the operations that can be performed on resources hosted on web servers.
+
+MAC Address (Media Access Control Address):
+A MAC address is a unique identifier assigned to network interfaces for communications at the data link layer of a network segment. MAC addresses are typically assigned by the manufacturer of a network interface card (NIC) and are used for communication within a local network. Unlike IP addresses, which can change based on network configurations, MAC addresses are hardcoded into the network interface hardware and generally do not change.
+
+Understanding these fundamental components of networking is essential for anyone working with computer networks, web development, or system administration. Each plays a critical role in enabling communication and data transfer across the internet and local networks.
+
+------------------------------------------------------------------------
+
+https://github.com/reach2arunprakash/javascript-101/tree/master/ppt
