@@ -1,0 +1,150 @@
+Sure! Let's start with the programs using anonymous functions:
+
+### Using Anonymous Functions:
+
+1. **Print Odd Numbers in an Array:**
+```
+let printOddNumbers = function(arr) {
+    arr.forEach(function(num) {
+        if (num % 2 !== 0) {
+            console.log(num);
+        }
+    });
+};
+```
+
+2. **Convert All Strings to Title Caps:**
+```
+let convertToTitleCaps = function(arr) {
+    return arr.map(function(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    });
+};
+```
+
+3. **Sum of All Numbers in an Array:**
+```
+let sumOfNumbers = function(arr) {
+    return arr.reduce(function(acc, curr) {
+        return acc + curr;
+    }, 0);
+};
+```
+
+4. **Return All Prime Numbers in an Array:**
+```
+let isPrime = function(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+
+let returnPrimeNumbers = function(arr) {
+    return arr.filter(function(num) {
+        return isPrime(num);
+    });
+};
+```
+
+5. **Return All Palindromes in an Array:**
+```
+let isPalindrome = function(str) {
+    return str === str.split('').reverse().join('');
+};
+
+let returnPalindromes = function(arr) {
+    return arr.filter(function(str) {
+        return isPalindrome(str);
+    });
+};
+```
+
+6. **Return Median of Two Sorted Arrays of the Same Size:**
+```
+let findMedianSortedArrays = function(nums1, nums2) {
+    let merged = nums1.concat(nums2).sort((a, b) => a - b);
+    let len = merged.length;
+    let mid = Math.floor(len / 2);
+    return len % 2 === 0 ? (merged[mid - 1] + merged[mid]) / 2 : merged[mid];
+};
+```
+
+7. **Remove Duplicates from an Array:**
+```
+let removeDuplicates = function(arr) {
+    return arr.filter(function(item, index) {
+        return arr.indexOf(item) === index;
+    });
+};
+```
+
+8. **Rotate an Array by k Times:**
+```
+let rotateArray = function(arr, k) {
+    let len = arr.length;
+    k = k % len; // handle cases where k > len
+    let rotated = arr.slice(k).concat(arr.slice(0, k));
+    return rotated;
+};
+```
+
+Now, let's proceed with the programs using arrow functions.
+
+### Using Arrow Functions:
+
+1. **Print Odd Numbers in an Array:**
+```
+let printOddNumbers = (arr) => {
+    arr.forEach(num => {
+        if (num % 2 !== 0) {
+            console.log(num);
+        }
+    });
+};
+```
+
+2. **Convert All Strings to Title Caps:**
+```
+let convertToTitleCaps = (arr) => {
+    return arr.map(str => {
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    });
+};
+```
+
+3. **Sum of All Numbers in an Array:**
+```
+let sumOfNumbers = (arr) => {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+};
+```
+
+4. **Return All Prime Numbers in an Array:**
+```
+let isPrime = num => {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+
+let returnPrimeNumbers = arr => {
+    return arr.filter(num => isPrime(num));
+};
+```
+
+5. **Return All Palindromes in an Array:**
+```
+let isPalindrome = str => {
+    return str === str.split('').reverse().join('');
+};
+
+let returnPalindromes = arr => {
+    return arr.filter(str => isPalindrome(str));
+};
+```
+
+These arrow functions are concise alternatives to traditional function declarations and offer a more streamlined syntax for writing  code.
