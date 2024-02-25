@@ -1,4 +1,3 @@
-Sure! Let's start with the programs using anonymous functions:
 
 ### Using Anonymous Functions:
 
